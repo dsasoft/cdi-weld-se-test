@@ -8,5 +8,4 @@ public class ComponentMessage implements Component {
 	public void executeComponent() {
 		System.out.println(ComponentMessage.class.getName());
 	}
-
 }
