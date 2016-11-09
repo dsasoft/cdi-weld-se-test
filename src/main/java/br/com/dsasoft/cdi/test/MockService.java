@@ -6,8 +6,12 @@ import br.com.dsasoft.cdi.test.qualifier.Message;
 
 public class MockService {
 
-	@Inject @Message
-	private Component component;
+	private final Component component;
+
+	@Inject
+	public MockService(@Message Component component) {
+		this.component = component;
+	}
 
 	public void executeComponent() {
 		component.executeComponent();

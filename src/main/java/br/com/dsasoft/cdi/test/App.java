@@ -14,6 +14,8 @@ public class App {
 		Weld weld = new Weld();
 		WeldContainer weldContainer = weld.initialize();
 		service = weldContainer.instance().select(MockService.class).get();
+		
+		
 		service.executeComponent();
 	}
 
